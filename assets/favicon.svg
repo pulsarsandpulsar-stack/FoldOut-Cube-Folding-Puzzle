@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-62 -68 124 136">
+  <g stroke="#39383B" stroke-width="4" stroke-linejoin="round">
+    <polygon points="0,-60 52,-30 0,0 -52,-30" fill="#D9AFA9"/>
+    <polygon points="-52,-30 0,0 0,60 -52,30" fill="#F3EEE7"/>
+    <polygon points="52,-30 0,0 0,60 52,30" fill="#D8C7A9"/>
+  </g>
+</svg>
