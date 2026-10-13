@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>FoldOut: Cube Folding Puzzle</title>
+  <meta name="description" content="FoldOut trains the cube-folding questions found in spatial reasoning and aptitude tests. Look at a flat net, pick the cube it folds into, then watch it fold.">
+  <meta name="theme-color" content="#EEEAE5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1C1B1D" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://pulsarsandpulsar-stack.github.io/FoldOut-Cube-Folding-Puzzle/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FoldOut">
+  <meta property="og:title" content="FoldOut: Cube Folding Puzzle">
+  <meta property="og:description" content="FoldOut trains the cube-folding questions found in spatial reasoning and aptitude tests. Look at a flat net, pick the cube it folds into, then watch it fold.">
+  <meta property="og:url" content="https://pulsarsandpulsar-stack.github.io/FoldOut-Cube-Folding-Puzzle/">
+  <meta property="og:image" content="https://pulsarsandpulsar-stack.github.io/FoldOut-Cube-Folding-Puzzle/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var t = localStorage.getItem("foldout-theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/site.js" defer></script>
+  <script src="assets/fold.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="brand" viewBox="-18 -18 1060 1060">
+      <polygon points="490.8,418.7 754.3,606.3 928.6,317.9 665.1,130.4" fill="#D8C7A9" stroke="#39383B" stroke-width="40" stroke-linejoin="round"/>
+  <polygon points="490.8,418.7 269.7,642.2 62.0,382.2 283.1,158.7" fill="#E4DCD1" stroke="#39383B" stroke-width="40" stroke-linejoin="round"/>
+  <polygon points="490.8,418.7 754.3,606.3 533.2,829.7 269.7,642.2" fill="#F3EEE7" stroke="#39383B" stroke-width="40" stroke-linejoin="round"/>
+  <polygon points="283.1,158.7 62.0,382.2 296.8,466.5 517.9,243.0" fill="#A35F59" stroke="#39383B" stroke-width="40" stroke-linejoin="round"/>
+  <polygon points="754.3,606.3 533.2,829.7 740.9,865.3 962.0,641.8" fill="#E9DFD2" stroke="#39383B" stroke-width="40" stroke-linejoin="round"/>
+  <polygon points="269.7,642.2 533.2,829.7 358.9,893.6 95.4,706.1" fill="#D9AFA9" stroke="#39383B" stroke-width="40" stroke-linejoin="round"/>
+  <line x1="490.8" y1="418.7" x2="490.8" y2="236.4" stroke="#A35F59" stroke-linecap="round" stroke-width="19.5" stroke-dasharray="9.1 46.8" opacity="0.85"/>
+  <line x1="490.8" y1="418.7" x2="269.7" y2="642.2" stroke="#A35F59" stroke-linecap="round" stroke-width="19.5" stroke-dasharray="9.1 46.8" opacity="0.85"/>
+  <line x1="490.8" y1="418.7" x2="754.3" y2="606.3" stroke="#A35F59" stroke-linecap="round" stroke-width="19.5" stroke-dasharray="9.1 46.8" opacity="0.85"/>
+  <line x1="490.8" y1="236.4" x2="269.7" y2="459.9" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="490.8" y1="236.4" x2="754.3" y2="424.0" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="269.7" y1="642.2" x2="269.7" y2="459.9" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="269.7" y1="642.2" x2="533.2" y2="829.7" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="269.7" y1="459.9" x2="533.2" y2="647.4" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="754.3" y1="606.3" x2="754.3" y2="424.0" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="754.3" y1="606.3" x2="533.2" y2="829.7" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="754.3" y1="424.0" x2="533.2" y2="647.4" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="533.2" y1="829.7" x2="533.2" y2="647.4" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+    </symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="FoldOut home">
+        <svg><use href="#brand"/></svg>
+        FoldOut
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a class="hide-sm" href="#features">Features</a>
+        <a class="hide-sm" href="#how">How it works</a>
+        <a class="hide-sm" href="#pro">Pro</a>
+        <a href="support.html">Support</a>
+        <button class="theme-toggle" type="button" data-theme-toggle data-mode="auto" aria-label="Change theme">
+          <svg class="icon icon-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+          <svg class="icon icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg>
+          <svg class="icon icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="reveal">
+            <span class="pill"><span class="dot"></span>Spatial reasoning practice</span>
+            <h1>See the fold <em>before</em> it happens.</h1>
+            <p class="lede">FoldOut trains the cube-folding questions in aptitude and spatial reasoning tests. Read a flat net, pick the cube it makes, then watch it fold up.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#" data-app-store-link aria-label="FoldOut on the App Store (coming soon)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>
+                <span class="btn-stack"><small>Coming soon</small>App Store</span>
+              </a>
+              <a class="btn btn-secondary" href="#how">How it works</a>
+            </div>
+            <p class="hero-note">
+              <svg><use href="#check"/></svg>
+              Free to start. No account, no ads, no tracking.
+            </p>
+          </div>
+
+          <div class="reveal reveal-delay-1">
+            <div class="well">
+              <div class="paper">
+                <span class="stage-label" data-fold-label>1 · Net</span>
+                <div class="fold-stage" data-fold-stage role="img" aria-label="Animation: a flat net of six faces folds up into a cube"></div>
+                <div class="stage-progress" aria-hidden="true"><span data-fold-progress></span></div>
+                <span class="stage-style" data-fold-style>Colours</span>
+              </div>
+              <div class="net-picker-head">
+                <span class="eyebrow">All 11 cube nets</span>
+                <span class="muted">Tap one to fold it</span>
+              </div>
+              <div class="net-picker" data-net-picker role="group" aria-label="Choose a net to fold"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat"><strong>11</strong><span>Every possible cube net</span></div>
+          <div class="stat"><strong>8</strong><span>Face styles, from colours to letters</span></div>
+          <div class="stat"><strong>48</strong><span>Questions in a Marathon session</span></div>
+          <div class="stat"><strong>0</strong><span>Data collected about you</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2>Built like the real test.<br>Explained like a tutor.</h2>
+          <p>Every question is generated fresh, marked fairly and comes with a fold-up animation, so you learn why an answer is right, not only that it is.</p>
+        </div>
+
+        <div class="features">
+          <article class="card feature reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1"/><rect x="13.5" y="3.5" width="7" height="7" rx="1"/><rect x="3.5" y="13.5" width="7" height="7" rx="1"/><rect x="13.5" y="13.5" width="7" height="7" rx="1"/></svg></div>
+            <h3>Real test format</h3>
+            <p>One net, four cubes, one right answer. The wrong options are near misses: mirror images, quarter turns, swapped faces and faces that can never be seen together.</p>
+          </article>
+          <article class="card feature reveal reveal-delay-1">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div>
+            <h3>Watch it fold</h3>
+            <p>Scrub through a 3D animation of the net folding into the correct cube, then turning to match the answer on screen.</p>
+          </article>
+          <article class="card feature reveal reveal-delay-2">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 3z"/></svg></div>
+            <h3>Hints that colour the joins</h3>
+            <p>Stuck? A hint colours the edges that meet when folded, and the faces that end up opposite each other.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9.5 2.5h5"/></svg></div>
+            <h3>Timed presets</h3>
+            <p>Quick, Standard, Sprint and Marathon sessions, or your own question count and pace. Practice mode or strict test conditions.</p>
+          </article>
+          <article class="card feature reveal reveal-delay-1">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
+            <h3>Find your weak spots</h3>
+            <p>Every report breaks your results down by net and face style. Pro adds all-time accuracy, so you can see which folds keep tripping you up.</p>
+          </article>
+          <article class="card feature reveal reveal-delay-2">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M5 15l4-4 3 3 7-7"/><path d="M15 7h4v4"/></svg></div>
+            <h3>History and trends <span class="tag">Pro</span></h3>
+            <p>Every session saved on your device, with accuracy and speed charted over time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">How it works</span>
+          <h2>Three steps. Every question.</h2>
+          <p>The same routine examiners expect, practised until it is automatic.</p>
+        </div>
+
+        <div class="steps">
+          <article class="card step reveal">
+            <span class="num">01</span>
+            <h3>Read the net</h3>
+            <p>Six faces laid flat. Work out which edges meet and which faces end up opposite.</p>
+            <div class="art" aria-hidden="true">
+              <svg viewBox="0 0 126 96">
+                <g stroke="#14304F" stroke-width="2" stroke-linejoin="round">
+                  <rect x="33" y="3" width="30" height="30" fill="#F2CF1D"/>
+                  <rect x="3" y="33" width="30" height="30" fill="#2C8BE6"/>
+                  <rect x="33" y="33" width="30" height="30" fill="#E2483B"/>
+                  <rect x="63" y="33" width="30" height="30" fill="#2DBE6C"/>
+                  <rect x="93" y="33" width="30" height="30" fill="#8A5CF0"/>
+                  <rect x="33" y="63" width="30" height="30" fill="#F58A1F"/>
+                </g>
+              </svg>
+            </div>
+          </article>
+          <article class="card step reveal reveal-delay-1">
+            <span class="num">02</span>
+            <h3>Pick the cube</h3>
+            <p>Four cubes, each showing three faces. Only one can be made from the net.</p>
+            <div class="art" aria-hidden="true">
+              <svg viewBox="0 0 236 80">
+                <g stroke="#14304F" stroke-width="1.8" stroke-linejoin="round">
+                  <g transform="translate(30 42)">
+                    <polygon points="0,-24 21,-12 0,0 -21,-12" fill="#F2CF1D"/><polygon points="-21,-12 0,0 0,24 -21,12" fill="#E2483B"/><polygon points="21,-12 0,0 0,24 21,12" fill="#8A5CF0"/>
+                  </g>
+                  <g transform="translate(88 42)">
+                    <polygon points="0,-24 21,-12 0,0 -21,-12" fill="#F2CF1D"/><polygon points="-21,-12 0,0 0,24 -21,12" fill="#E2483B"/><polygon points="21,-12 0,0 0,24 21,12" fill="#2DBE6C"/>
+                  </g>
+                  <g transform="translate(146 42)">
+                    <polygon points="0,-24 21,-12 0,0 -21,-12" fill="#F58A1F"/><polygon points="-21,-12 0,0 0,24 -21,12" fill="#F2CF1D"/><polygon points="21,-12 0,0 0,24 21,12" fill="#2C8BE6"/>
+                  </g>
+                  <g transform="translate(204 42)">
+                    <polygon points="0,-24 21,-12 0,0 -21,-12" fill="#2C8BE6"/><polygon points="-21,-12 0,0 0,24 -21,12" fill="#8A5CF0"/><polygon points="21,-12 0,0 0,24 21,12" fill="#F2CF1D"/>
+                  </g>
+                </g>
+                <rect x="61" y="10" width="54" height="64" rx="10" fill="none" stroke="#4C7D59" stroke-width="2.5"/>
+              </svg>
+            </div>
+          </article>
+          <article class="card step reveal reveal-delay-2">
+            <span class="num">03</span>
+            <h3>Watch it fold</h3>
+            <p>Check your answer, then play the fold to see exactly how the net closes into that cube.</p>
+            <div class="art" aria-hidden="true">
+              <svg viewBox="0 0 200 90">
+                <g stroke="#14304F" stroke-width="1.8" stroke-linejoin="round">
+                  <rect x="8" y="30" width="26" height="26" fill="#E2483B"/>
+                  <rect x="34" y="30" width="26" height="26" fill="#2DBE6C"/>
+                  <polygon points="60,30 78,20 78,46 60,56" fill="#8A5CF0"/>
+                  <polygon points="34,30 60,30 70,18 44,18" fill="#F2CF1D"/>
+                </g>
+                <path d="M96 45h28M116 37l8 8-8 8" fill="none" stroke="#A35F59" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <g transform="translate(164 47)" stroke="#14304F" stroke-width="1.8" stroke-linejoin="round">
+                  <polygon points="0,-28 25,-14 0,0 -25,-14" fill="#F2CF1D"/><polygon points="-25,-14 0,0 0,28 -25,14" fill="#2DBE6C"/><polygon points="25,-14 0,0 0,28 25,14" fill="#8A5CF0"/>
+                </g>
+              </svg>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Free & Pro -->
+    <section class="section" id="pro">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Free &amp; Pro</span>
+          <h2>Start free. Go Pro when you're ready.</h2>
+          <p>The core trainer is free, with no limit on how many sessions you play. FoldOut Pro adds the harder styles and the tools that track your progress.</p>
+        </div>
+
+        <div class="plans">
+          <article class="card plan reveal">
+            <span class="eyebrow">Free</span>
+            <h3>FoldOut</h3>
+            <p class="price">Free download</p>
+            <ul>
+              <li><svg><use href="#check"/></svg>All 11 cube nets</li>
+              <li><svg><use href="#check"/></svg>Colours, Dice and Numbers face styles</li>
+              <li><svg><use href="#check"/></svg>12 and 24-question sessions</li>
+              <li><svg><use href="#check"/></svg>Hints, fold-up animations and end-of-session reports</li>
+              <li><svg><use href="#check"/></svg>Practice and test-conditions modes</li>
+            </ul>
+          </article>
+          <article class="card plan pro reveal reveal-delay-1">
+            <span class="eyebrow" style="color: var(--accent)">Monthly or yearly</span>
+            <h3>FoldOut Pro</h3>
+            <p class="price">Auto-renewing subscription, priced in your local currency on the App Store</p>
+            <ul>
+              <li><svg><use href="#check"/></svg>Everything in Free</li>
+              <li><svg><use href="#check"/></svg>All 8 face styles: Shapes, Letters, Arrows, Patterns and Mixed</li>
+              <li><svg><use href="#check"/></svg>Longer 36 and 48-question sessions</li>
+              <li><svg><use href="#check"/></svg>Saved history with progress trends</li>
+              <li><svg><use href="#check"/></svg>All-time accuracy for every net and style</li>
+            </ul>
+            <p class="fineprint">Payment is charged to your Apple Account. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel any time in your Apple Account settings. See the <a href="terms.html#subscriptions">Terms of Use</a>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy band -->
+    <section class="section" style="padding-top: 0">
+      <div class="container">
+        <div class="card privacy-band reveal">
+          <div class="shield"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8.3-7.5 9.5-4.3-1.2-7.5-5-7.5-9.5V6z"/><path d="M8.8 12.2l2.2 2.2 4.4-4.6" stroke-linecap="round"/></svg></div>
+          <div>
+            <h3>Private by design</h3>
+            <p>No sign-up, no analytics, no ads and no tracking. Your practice history stays on your device, and purchases are handled entirely by Apple.</p>
+          </div>
+          <a class="btn btn-secondary" href="privacy.html">Read the privacy policy</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="padding-top: 0">
+      <div class="container">
+        <div class="card cta reveal">
+          <svg class="brand-big" aria-hidden="true"><use href="#brand"/></svg>
+          <h2>Fold nets in your head,<br>not on paper.</h2>
+          <p>FoldOut is coming to iPhone, iPad, Mac and Apple Vision Pro.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#" data-app-store-link aria-label="FoldOut on the App Store (coming soon)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>
+              <span class="btn-stack"><small>Coming soon</small>App Store</span>
+            </a>
+            <a class="btn btn-secondary" href="support.html">Get support</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html"><svg><use href="#brand"/></svg>FoldOut</a>
+          <p>Cube-folding practice for spatial reasoning and aptitude tests.</p>
+        </div>
+        <div>
+          <h4>App</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="index.html#how">How it works</a></li>
+            <li><a href="#pro">FoldOut Pro</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Help &amp; legal</h4>
+          <ul>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="mailto:pulsarsandpulsar@gmail.com">pulsarsandpulsar@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> FoldOut. All rights reserved.</span>
+        <span>Apple, iPhone, iPad, Mac and Apple Vision Pro are trademarks of Apple Inc.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

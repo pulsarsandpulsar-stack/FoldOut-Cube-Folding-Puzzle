@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-18 -18 1060 1060" width="1060" height="1060">
+  <polygon points="490.8,418.7 754.3,606.3 928.6,317.9 665.1,130.4" fill="#D8C7A9" stroke="#39383B" stroke-width="40" stroke-linejoin="round"/>
+  <polygon points="490.8,418.7 269.7,642.2 62.0,382.2 283.1,158.7" fill="#E4DCD1" stroke="#39383B" stroke-width="40" stroke-linejoin="round"/>
+  <polygon points="490.8,418.7 754.3,606.3 533.2,829.7 269.7,642.2" fill="#F3EEE7" stroke="#39383B" stroke-width="40" stroke-linejoin="round"/>
+  <polygon points="283.1,158.7 62.0,382.2 296.8,466.5 517.9,243.0" fill="#A35F59" stroke="#39383B" stroke-width="40" stroke-linejoin="round"/>
+  <polygon points="754.3,606.3 533.2,829.7 740.9,865.3 962.0,641.8" fill="#E9DFD2" stroke="#39383B" stroke-width="40" stroke-linejoin="round"/>
+  <polygon points="269.7,642.2 533.2,829.7 358.9,893.6 95.4,706.1" fill="#D9AFA9" stroke="#39383B" stroke-width="40" stroke-linejoin="round"/>
+  <line x1="490.8" y1="418.7" x2="490.8" y2="236.4" stroke="#A35F59" stroke-linecap="round" stroke-width="19.5" stroke-dasharray="9.1 46.8" opacity="0.85"/>
+  <line x1="490.8" y1="418.7" x2="269.7" y2="642.2" stroke="#A35F59" stroke-linecap="round" stroke-width="19.5" stroke-dasharray="9.1 46.8" opacity="0.85"/>
+  <line x1="490.8" y1="418.7" x2="754.3" y2="606.3" stroke="#A35F59" stroke-linecap="round" stroke-width="19.5" stroke-dasharray="9.1 46.8" opacity="0.85"/>
+  <line x1="490.8" y1="236.4" x2="269.7" y2="459.9" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="490.8" y1="236.4" x2="754.3" y2="424.0" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="269.7" y1="642.2" x2="269.7" y2="459.9" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="269.7" y1="642.2" x2="533.2" y2="829.7" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="269.7" y1="459.9" x2="533.2" y2="647.4" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="754.3" y1="606.3" x2="754.3" y2="424.0" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="754.3" y1="606.3" x2="533.2" y2="829.7" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="754.3" y1="424.0" x2="533.2" y2="647.4" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+  <line x1="533.2" y1="829.7" x2="533.2" y2="647.4" stroke="#A35F59" stroke-linecap="round" stroke-width="26.0"/>
+</svg>
